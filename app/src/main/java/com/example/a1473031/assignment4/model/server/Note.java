@@ -45,15 +45,18 @@ public class Note {
     private static class _links{
         private static class self{
             private String href;
-            
+
+            //getter setter
         }
 
         private static class note{
             private String href;
+            //getter setter
         }
 
         private static class createdBy{
             private String href;
+            //getter setter
         }
 
     }
