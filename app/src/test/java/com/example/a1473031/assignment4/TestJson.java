@@ -2,6 +2,7 @@ package com.example.a1473031.assignment4;
 
 import com.example.a1473031.assignment4.model.server.Note;
 import com.example.a1473031.assignment4.model.server.User;
+//import com.example.a1473031.assignment4.model.server.User;
 
 import org.junit.Test;
 
@@ -245,7 +246,7 @@ public class TestJson {
     /**
      * Test the parsing of a standard JSON representation
      */
-    /*
+
     @Test
     public void testUserJson() {
         User user = User.parse(userJson);
@@ -254,30 +255,30 @@ public class TestJson {
         assertEquals("ian.clement@johnabbott.qc.ca", user.getEmail());
     }
 
-    /*
+
 
     /**
      * Test the parsing of JSON that includes nulls
      */
-    /*
+
     @Test
     public void testUserJsonNullable() {
         User user = User.parse(userJsonNull);
         assertNull(user.getEmail());
     }
-    */
+
 
     /**
      * Test the user password checks works
      * - Uses SHA-1 algorithm to hash password argument
      */
-    /*
+
     @Test
     public void testUserPassword() {
         User user = User.parse(userJson);
         assertTrue(user.isPassword("foobar"));
     }
-    */
+
 
     /**
      * Test that the links in the user JSON representation are stored.
@@ -299,14 +300,14 @@ public class TestJson {
      * Test that the generated user is in the correct format for the server.
      */
 
-    /*
+
     @Test
     public void testUserToJson() {
         User user = new User("bar", "abc", "bar@bar.com");
         assertEquals("{\"name\":\"bar\",\"password\":\"a9993e364706816aba3e25717850c26c9cd0d89d\",\"email\":\"bar@bar.com\"}", user.format());
     }
 
-    */
+
 
     /**
      * Test the parsing of a standard JSON representation: simple fields only
@@ -357,7 +358,7 @@ public class TestJson {
         Note note = Note.parse(noteJsonNull);
         assertNull(note.getBody());
         assertNull(note.getReminder());
-    //    assertFalse(note.isHasReminder());
+        assertFalse(note.isHasReminder());
     }
 
     /**
@@ -374,7 +375,7 @@ public class TestJson {
             note.setReminder(format.parse("2016-09-10T04:23:34.000+0000"));
             note.setCreated(format.parse("2016-10-12T20:32:54.000+0000"));
             note.setCreatedBy("http://localhost:9999/user/1");
-            assertEquals("{\"title\":\"foo\",\"body\":\"bar\",\"category\":123,\"reminder\":\"2016-09-10T00:23:34.000-0400\",\"created\":\"2016-10-12T16:32:54.000-0400\",\"createdBy\":\"http://localhost:9999/user/1\"}", note.format());
+            assertEquals("{\"title\":\"foo\",\"body\":\"bar\",\"category\":123,\"hasReminder\":false,\"reminder\":\"2016-09-10T00:23:34.000-0400\",\"created\":\"2016-10-12T16:32:54.000-0400\",\"createdBy\":\"http://localhost:9999/user/1\"}", note.format());
         } catch (ParseException e) {
             fail();
         }
@@ -384,7 +385,7 @@ public class TestJson {
      * Test the parsing of the JSON representing a list of users
      */
 
-    /*
+
     @Test
     public void testUserList() {
         User[] users = User.parseArray(userListJson);
@@ -393,7 +394,7 @@ public class TestJson {
         assertEquals("bar", users[1].getName());
     }
 
-    */
+
 
 
     /**

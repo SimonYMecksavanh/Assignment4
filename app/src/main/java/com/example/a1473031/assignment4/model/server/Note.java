@@ -42,6 +42,7 @@ public class Note {
         private static Note[] notes;
     }
 
+
     private static class _links{
         private static class self{
             private String href;
@@ -68,9 +69,9 @@ public class Note {
     private Date reminder;
     private Date created;
     private String createdBy;
-    private _links links;
+   // private _links links;
 
-    public Note() { links = new _links(); }
+  //  public Note() { links = new _links(); }
 
 
     public boolean isHasReminder() {
