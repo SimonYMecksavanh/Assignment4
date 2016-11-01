@@ -60,7 +60,7 @@ public class User {
             e.printStackTrace();
         }
 
-        if (this.password == password)
+        if (this.password.equals(password))
             return true;
         else
             return false;
