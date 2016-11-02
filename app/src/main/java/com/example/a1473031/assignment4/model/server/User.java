@@ -46,6 +46,22 @@ public class User {
 
     }
 
+    private static class _links{
+        private static class self{
+            private String href;
+
+        }
+
+        private static class user{
+            private String href;
+        }
+
+        private static class created{
+            private String href;
+        }
+
+    }
+
     private String name;
     private String password;
     private String email;
